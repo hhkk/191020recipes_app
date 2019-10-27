@@ -15,6 +15,7 @@ class RecipesApp extends StatelessWidget {
         '/': (context) => LoginScreen(),
         '/login': (context) => LoginScreen(),
         '/login2': (context) => LoginScreen(),
+        '/loginhk': (context) => LoginScreen(),
       },
     );
   }

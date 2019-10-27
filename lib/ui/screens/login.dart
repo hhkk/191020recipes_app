@@ -29,14 +29,20 @@ class LoginScreen extends StatelessWidget {
         decoration: _buildBackground(),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              SizedBox(height: 20.0),
               _buildText(),
               SizedBox(height: 50.0),
               MaterialButton(
                 color: Colors.white,
-                child: Text("Sign in to UsToDo.com version 12 with Google"),
-                onPressed: () => print("Button pressed."),
+                child: Text("Sign in to UsToDo.com v17 with Google"),
+                onPressed: () => print("Button pressed1."),
+              ),
+              MaterialButton(
+                color: Colors.white,
+                child: Text("Sign2 in to UsToDo.com v19 with Google"),
+                onPressed: () => print("Button pressed2."),
               ),
             ],
           ),
