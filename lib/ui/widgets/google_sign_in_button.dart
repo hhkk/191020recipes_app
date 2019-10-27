@@ -30,13 +30,18 @@ class GoogleSignInButton extends StatelessWidget {
 
     return MaterialButton(
       height: 40.0,
-      onPressed: this.onPressed,
+      onPressed: () =>
+      // We replace the current page.
+      // After navigating to the replacement, it's not possible
+      // to go back to the previous screen:
+      Navigator.of(context).pushReplacementNamed('/'),
+      //onPressed: this.onPressed,
       color: Colors.white,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           _buildLogo(),
-          SizedBox(width: 24.0),
+          SizedBox(width: 12.0),
           _buildText(),
         ],
       ),
