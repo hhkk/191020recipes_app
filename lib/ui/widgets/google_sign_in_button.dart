@@ -8,8 +8,10 @@ class GoogleSignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Image _buildLogo() {
-      return Image.asset(
-        "assets/g-logo.png",
+      //return Image.asset( "bldg.jpeg", // hbk yes
+      //return Image.asset( "g-logo.png", // hbk yes
+      return Image.asset( "googlegx.png", // hbk
+      // no return Image.asset( "photoc-1505935428862-770b6f24f629_z.jpg", // hbk
         height: 18.0,
         width: 18.0,
       );
@@ -34,7 +36,9 @@ class GoogleSignInButton extends StatelessWidget {
       // We replace the current page.
       // After navigating to the replacement, it's not possible
       // to go back to the previous screen:
-      Navigator.of(context).pushReplacementNamed('/'),
+      //print('The value of the input is: $value');
+      print('hbkpressed ====================================='),
+      // Navigator.of(context).pushReplacementNamed('/'),
       //onPressed: this.onPressed,
       color: Colors.white,
       child: Row(

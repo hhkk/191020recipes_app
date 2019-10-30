@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
     BoxDecoration _buildBackground() {
       return BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("bldg.jpeg"),
+          image: AssetImage("bldg.jpeg"), // hbk
           fit: BoxFit.cover,
         ),
       );
@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
 
     Text _buildText() {
       return Text(
-        'UsToDo.com',
+        'UsToDo.com15',
         style: Theme.of(context).textTheme.headline,
         textAlign: TextAlign.center,
       );
