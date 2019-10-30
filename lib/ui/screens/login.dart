@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
     BoxDecoration _buildBackground() {
       return BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("bldg.jpeg"), // hbk
+          image: AssetImage("assets/images/bldg.jpeg"), // hbk
           fit: BoxFit.cover,
         ),
       );

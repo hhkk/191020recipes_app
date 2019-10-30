@@ -49,11 +49,12 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   assets:
-    - bldg.jpeg  #hbk
-    - g-logo.png #hbkd
-    - googlegxs.png #hbkd
-    - photoc-1505935428862-770b6f24f629_z.jpg #hbk
-    - ustodo.png
+    - assets/images/
+#    - bldg.jpeg  #hbk
+#    - g-logo.png #hbkd
+#    - googlegxs.png #hbkd
+#    - photoc-1505935428862-770b6f24f629_z.jpg #hbk
+#    - ustodo.png
 
 
   fonts: # New
