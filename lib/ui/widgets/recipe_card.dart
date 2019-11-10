@@ -8,7 +8,7 @@ class RecipeCard extends StatelessWidget {
   final Function onFavoriteButtonPressed;
 
   RecipeCard(
-      { @required this.recipe,
+      {@required this.recipe,
         @required this.inFavorites,
         @required this.onFavoriteButtonPressed});
 
@@ -38,7 +38,7 @@ class RecipeCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              recipe.name,
+              "hbkhbk" + recipe.name,
             ),
             // Empty space:
             SizedBox(height: 10.0),
@@ -57,7 +57,7 @@ class RecipeCard extends StatelessWidget {
     }
 
     return GestureDetector(
-      onTap: () => print("Tapped!"),
+      onTap: () => print("Tapped!" + recipe.id),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
         child: Card(

@@ -37,8 +37,11 @@ class GoogleSignInButton extends StatelessWidget {
       // After navigating to the replacement, it's not possible
       // to go back to the previous screen:
       //print('The value of the input is: $value');
-      print('hbkpressed ====================================='),
-      // Navigator.of(context).pushReplacementNamed('/'),
+
+
+      //print('hbkpressed ====================================='),
+
+      Navigator.of(context).pushReplacementNamed('/'),  // hbkhbk
       //onPressed: this.onPressed,
       color: Colors.white,
       child: Row(

@@ -87,6 +87,7 @@ List<Recipe> getRecipes() {
 List<String> getFavoritesIDs() {
   return [
     '0',
+    '1',
     '2',
     '3',
   ];

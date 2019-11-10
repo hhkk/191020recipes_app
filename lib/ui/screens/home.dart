@@ -19,6 +19,11 @@ class HomeScreenState extends State<HomeScreen> {
   // signalize the parent widget HomeScreen to refresh the list view.
   void _handleFavoritesListChanged(String recipeID) {
     // Set new state and refresh the widget:
+
+    for (Recipe r in recipes) {
+      if (r.id == recipeID)
+        print("hbkhbk in fav change:" + r.name);
+    }
     setState(() {
       if (userFavorites.contains(recipeID)) {
         userFavorites.remove(recipeID);
@@ -31,24 +36,28 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     // New method:
-    Column _buildRecipes(List<Recipe> recipesList) {
-      return Column(
-        children: <Widget>[
-          Expanded(
-            child: ListView.builder(
-              itemCount: recipesList.length,
-              itemBuilder: (BuildContext context, int index) {
-                // New code:
-                return new RecipeCard(
-                  recipe: recipesList[index],
-                  inFavorites: userFavorites.contains(recipesList[index].id),
-                  onFavoriteButtonPressed: _handleFavoritesListChanged,
-                );
-              },
+    Padding _buildRecipes(List<Recipe> recipesList) { // New code  hbkhbk here a lot?
+      return Padding( // New code
+        // Padding before and after the list view:
+        padding: const EdgeInsets.symmetric(vertical: 5.0), // New code
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: ListView.builder(
+                itemCount: recipesList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return new RecipeCard(
+                    recipe: recipesList[index],
+                    inFavorites:
+                    userFavorites.contains(recipesList[index].id),
+                    onFavoriteButtonPressed: _handleFavoritesListChanged,
+                  );
+                },
+              ),
             ),
-          ),
-        ],
-      );
+          ],
+        ),
+      ); // New code
     }
 
     const double _iconSize = 20.0;
@@ -65,10 +74,12 @@ class HomeScreenState extends State<HomeScreen> {
             bottom: TabBar(
               labelColor: Theme.of(context).indicatorColor,
               tabs: [
-                Tab(icon: Icon(Icons.restaurant, size: _iconSize)),
+                Tab(icon: Icon(Icons.restaurant, size: _iconSize)), // hbkhbk
                 Tab(icon: Icon(Icons.local_drink, size: _iconSize)),
                 Tab(icon: Icon(Icons.favorite, size: _iconSize)),
                 Tab(icon: Icon(Icons.settings, size: _iconSize)),
+                //Tab(icon: Icon(Icons.settings_bluetooth, size: _iconSize)),
+
               ],
             ),
           ),
