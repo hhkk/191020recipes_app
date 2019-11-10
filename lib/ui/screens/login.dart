@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
               _buildText2(),
               SizedBox(height: 50.0),
               Text(
-                'UsToDo.com16yoyo',
+                'UsToDo.com16TATA ',
                 style: Theme.of(context).textTheme.headline,
                 textAlign: TextAlign.center,
               ),

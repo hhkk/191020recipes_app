@@ -39,6 +39,7 @@ class RecipeCard extends StatelessWidget {
           children: <Widget>[
             Text(
               "hbkhbk" + recipe.name,
+              style: Theme.of(context).textTheme.title, // New code
             ),
             // Empty space:
             SizedBox(height: 10.0),
@@ -47,7 +48,9 @@ class RecipeCard extends StatelessWidget {
                 Icon(Icons.timer, size: 20.0),
                 SizedBox(width: 5.0),
                 Text(
-                  recipe.duration.toString(),
+                  recipe.getDurationString,
+                  // New code
+                  style: Theme.of(context).textTheme.caption,
                 ),
               ],
             ),
@@ -73,7 +76,7 @@ class RecipeCard extends StatelessWidget {
                     aspectRatio: 16.0 / 9.0,
                     child: Image.network(
                       recipe.imageURL,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                   Positioned(
