@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:recipes_app/ui/widgets/google_sign_in_button.dart'; // New code
+import 'package:recipes_app/state_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -52,10 +53,19 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               // Passing function callback as constructor argument:
-              GoogleSignInButton( // New code
-                onPressed: () =>
-                    print("Button pressed2."), // New code
-              ), // New code
+
+
+              GoogleSignInButton(
+                onPressed: () => StateWidget.of(context).signInWithGoogle(),
+              ),
+
+
+
+
+//              GoogleSignInButton( // New code
+//                onPressed: () =>
+//                    print("Button pressed2."), // New code
+//              ), // New code
             ],
           ),
         ),
