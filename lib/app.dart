@@ -7,18 +7,13 @@ class RecipesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) { // hbkhbkbuild
     return MaterialApp(
+      title: 'Recipeshbkhbk',
+      theme: buildTheme(),
+      // initialRoute: '/login',
       debugShowCheckedModeBanner: false,
-      title: 'Recipes2',
-      theme: buildTheme(), // New code
-      initialRoute: '/login',
       routes: {
-        // If you're using navigation routes, Flutter needs a base route.
-        // We're going to change this route once we're ready with
-        // implementation of HomeScreen.
         '/': (context) => HomeScreen(),
         '/login': (context) => LoginScreen(),
-        '/login2': (context) => LoginScreen(),
-        '/loginhk': (context) => LoginScreen(),
       },
     );
   }
@@ -26,4 +21,23 @@ class RecipesApp extends StatelessWidget {
 
 
 
-
+//
+//
+//
+//
+//
+//return MaterialApp(
+//debugShowCheckedModeBanner: false,
+//title: 'Recipes2',
+//theme: buildTheme(), // New code
+//initialRoute: '/login',
+//routes: {
+//// If you're using navigation routes, Flutter needs a base route.
+//// We're going to change this route once we're ready with
+//// implementation of HomeScreen.
+//'/': (context) => HomeScreen(),
+//'/login': (context) => LoginScreen(),
+//'/login2': (context) => LoginScreen(),
+//'/loginhk': (context) => LoginScreen(),
+//},
+//);
