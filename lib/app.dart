@@ -9,7 +9,7 @@ class RecipesApp extends StatelessWidget {
     return MaterialApp(
       title: 'Recipeshbkhbk',
       theme: buildTheme(),
-      // initialRoute: '/login',
+      initialRoute: '/login',
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => HomeScreen(),
